@@ -1,11 +1,13 @@
 # Postfix DB check
-Check that postfix DB files have been postmap updated.
+Check that postfix DB files have been postmap updated.  
   
 The following bash script will check to see if a corresponding .DB file date and time are within 3 minutes of each other. It will send an email to an address of choice to notify that a required 'postmap' to update the .DB was not perormed.  
   
 Cronjobs required:  
 */2 * * * * /etc/specialpgms/PostfixDbChecker.sh sender_access &> /dev/null  
 */2 * * * * /etc/specialpgms/PostfixDbChecker.sh recipient_access &> /dev/null  
+  
+  
   
 ```
 #!/bin/bash
